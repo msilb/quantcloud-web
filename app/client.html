@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+    <meta charset="utf-8">
+    <title>QuantCloud</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="shortcut icon" href="images/qc_favicon.png">
+    <!-- build:css styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="../bower_components/gridster/dist/jquery.gridster.css" />
+    <link rel="stylesheet" href="../bower_components/contour/dist/contour.min.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+    <!-- build:js scripts/vendor/modernizr.js -->
+    <script src="../bower_components/modernizr/modernizr.js"></script>
+    <!-- endbuild -->
+
+</head>
+<body>
+<!--[if lt IE 10]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+    your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<nav role="navigation" class="navbar navbar-static-top navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="index.html">QuantCloud</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="index.html"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+        </ul>
+        <div class="nav navbar-text">Client Sheet</div>
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">About</a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-envelope"></span> Contact </a></li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="gridster">
+            <ul>
+                <li data-row="1" data-col="1" data-sizex="9" data-sizey="10">
+                    <table class="table table-condensed table-hover">
+                        <thead>
+                            <tr>
+                                <th>Cash</th>
+                                <th>Live</th>
+                                <th>Override</th>
+                                <th class="text-center">Use</th>
+                                <th>Implied</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1d</td>
+                                <td id="ZAR.1d"></td>
+                                <td><label><input class="qc-input" type="text" size="5" maxlength="8"></label></td>
+                                <td class="text-center"><label><input type="checkbox" checked="y"></label></td>
+                                <td id="ZAR.1d_c"></td>
+                            </tr>
+                            <tr>
+                                <td>1w</td>
+                                <td id="ZAR.1w"></td>
+                                <td><label><input class="qc-input" type="text" size="5" maxlength="8"></label></td>
+                                <td class="text-center"><label><input type="checkbox" checked="y"></label></td>
+                                <td id="ZAR.1w_c"></td>
+                            </tr>
+                            <tr>
+                                <td>1m</td>
+                                <td id="ZAR.1m"></td>
+                                <td><label><input class="qc-input" type="text" size="5" maxlength="8"></label></td>
+                                <td class="text-center"><label><input type="checkbox" checked="y"></label></td>
+                                <td id="ZAR.1m_c"></td>
+                            </tr>
+                            <tr>
+                                <td>2m</td>
+                                <td id="ZAR.2m"></td>
+                                <td><label><input class="qc-input" type="text" size="5" maxlength="8"></label></td>
+                                <td class="text-center"><label><input type="checkbox" checked="y"></label></td>
+                                <td id="ZAR.2m_c"></td>
+                            </tr>
+                            <tr>
+                                <td>3m</td>
+                                <td id="ZAR.3m"></td>
+                                <td><label><input class="qc-input" type="text" size="5" maxlength="8"></label></td>
+                                <td class="text-center"><label><input type="checkbox" checked="y"></label></td>
+                                <td id="ZAR.3m_c"></td>
+                            </tr>
+                            <tr>
+                                <td>6m</td>
+                                <td id="ZAR.6m"></td>
+                                <td><label><input class="qc-input" type="text" size="5" maxlength="8"></label></td>
+                                <td class="text-center"><label><input type="checkbox"></label></td>
+                                <td id="ZAR.6m_c"></td>
+                            </tr>
+                            <tr>
+                                <td>9m</td>
+                                <td id="ZAR.9m"></td>
+                                <td><label><input class="qc-input" type="text" size="5" maxlength="8"></label></td>
+                                <td class="text-center"><label><input type="checkbox"></label></td>
+                                <td id="ZAR.9m_c"></td>
+                            </tr>
+                            <tr>
+                                <td>12m</td>
+                                <td id="ZAR.12m"></td>
+                                <td><label><input class="qc-input" type="text" size="5" maxlength="8"></label></td>
+                                <td class="text-center"><label><input type="checkbox"></label></td>
+                                <td id="ZAR.12m_c"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </li>
+                <li data-row="1" data-col="1" data-sizex="9" data-sizey="13">
+                    <table class="table table-condensed table-hover">
+                        <thead>
+                            <tr>
+                                <th>FRAs</th>
+                                <th>Live</th>
+                                <th>Override</th>
+                                <th class="text-center">Use</th>
+                                <th>Implied</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1x4</td>
+                                <td id="ZAR.1x4"></td>
+                                <td><label><input class="qc-input" type="text" size="5" maxlength="8"></label></td>
+                                <td class="text-center"><label><input type="checkbox" checked="y"></label></td>
+                                <td id="ZAR.1x4_c"></td>
+                            </tr>
+                            <tr>
+                                <td>2x5</td>
+                                <td id="ZAR.2x5"></td>
+                                <td><label><input class="qc-input" type="text" size="5" maxlength="8"></label></td>
+                                <td class="text-center"><label><input type="checkbox" checked="y"></label></td>
+                                <td id="ZAR.2x5_c"></td>
+                            </tr>
+                            <tr>
+                                <td>3x6</td>
+                                <td id="ZAR.3x6"></td>
+                                <td><label><input class="qc-input" type="text" size="5" maxlength="8"></label></td>
+                                <td class="text-center"><label><input type="checkbox" checked="y"></label></td>
+                                <td id="ZAR.3x6_c"></td>
+                            </tr>
+                            <tr>
+                                <td>4x7</td>
+                                <td id="ZAR.4x7"></td>
+                                <td><label><input class="qc-input" type="text" size="5" maxlength="8"></label></td>
+                                <td class="text-center"><label><input type="checkbox" checked="y"></label></td>
+                                <td id="ZAR.4x7_c"></td>
+                            </tr>
+                            <tr>
+                                <td>5x8</td>
+                                <td id="ZAR.5x8"></td>
+                                <td><label><input class="qc-input" type="text" size="5" maxlength="8"></label></td>
+                                <td class="text-center"><label><input type="checkbox" checked="y"></label></td>
+                                <td id="ZAR.5x8_c"></td>
+                            </tr>
+                            <tr>
+                                <td>6x9</td>
+                                <td id="ZAR.6x9"></td>
+                                <td><label><input class="qc-input" type="text" size="5" maxlength="8"></label></td>
+                                <td class="text-center"><label><input type="checkbox" checked="y"></label></td>
+                                <td id="ZAR.6x9_c"></td>
+                            </tr>
+                            <tr>
+                                <td>9x12</td>
+                                <td id="ZAR.9x12"></td>
+                                <td><label><input class="qc-input" type="text" size="5" maxlength="8"></label></td>
+                                <td class="text-center"><label><input type="checkbox" checked="y"></label></td>
+                                <td id="ZAR.9x12_c"></td>
+                            </tr>
+                            <tr>
+                                <td>12x15</td>
+                                <td id="ZAR.12x15"></td>
+                                <td><label><input class="qc-input" type="text" size="5" maxlength="8"></label></td>
+                                <td class="text-center"><label><input type="checkbox" checked="y"></label></td>
+                                <td id="ZAR.12x15_c"></td>
+                            </tr>
+                            <tr>
+                                <td>15x18</td>
+                                <td id="ZAR.15x18"></td>
+                                <td><label><input class="qc-input" type="text" size="5" maxlength="8"></label></td>
+                                <td class="text-center"><label><input type="checkbox" checked="y"></label></td>
+                                <td id="ZAR.15x18_c"></td>
+                            </tr>
+                            <tr>
+                                <td>18x21</td>
+                                <td id="ZAR.18x21"></td>
+                                <td><label><input class="qc-input" type="text" size="5" maxlength="8"></label></td>
+                                <td class="text-center"><label><input type="checkbox" checked="y"></label></td>
+                                <td id="ZAR.18x21_c"></td>
+                            </tr>
+                            <tr>
+                                <td>21x24</td>
+                                <td id="ZAR.21x24"></td>
+                                <td><label><input class="qc-input" type="text" size="5" maxlength="8"></label></td>
+                                <td class="text-center"><label><input type="checkbox"></label></td>
+                                <td id="ZAR.21x24_c"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </li>
+                <li data-row="1" data-col="1" data-sizex="9" data-sizey="15">
+                    <table class="table table-condensed table-hover">
+                        <thead>
+                            <tr>
+                                <th>Swaps</th>
+                                <th>Live</th>
+                                <th>Override</th>
+                                <th class="text-center">Use</th>
+                                <th>Implied</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1y</td>
+                                <td id="ZAR.1y"></td>
+                                <td><label><input class="qc-input" type="text" size="5" maxlength="8"></label></td>
+                                <td class="text-center"><label><input type="checkbox"></label></td>
+                                <td id="ZAR.1y_c"></td>
+                            </tr>
+                            <tr>
+                                <td>18m</td>
+                                <td id="ZAR.18m"></td>
+                                <td><label><input class="qc-input" type="text" size="5" maxlength="8"></label></td>
+                                <td class="text-center"><label><input type="checkbox"></label></td>
+                                <td id="ZAR.18m_c"></td>
+                            </tr>
+                            <tr>
+                                <td>2y</td>
+                                <td id="ZAR.2y"></td>
+                                <td><label><input class="qc-input" type="text" size="5" maxlength="8"></label></td>
+                                <td class="text-center"><label><input type="checkbox" checked="y"></label></td>
+                                <td id="ZAR.2y_c"></td>
+                            </tr>
+                            <tr>
+                                <td>3y</td>
+                                <td id="ZAR.3y"></td>
+                                <td><label><input class="qc-input" type="text" size="5" maxlength="8"></label></td>
+                                <td class="text-center"><label><input type="checkbox" checked="y"></label></td>
+                                <td id="ZAR.3y_c"></td>
+                            </tr>
+                            <tr>
+                                <td>4y</td>
+                                <td id="ZAR.4y"></td>
+                                <td><label><input class="qc-input" type="text" size="5" maxlength="8"></label></td>
+                                <td class="text-center"><label><input type="checkbox" checked="y"></label></td>
+                                <td id="ZAR.4y_c"></td>
+                            </tr>
+                            <tr>
+                                <td>5y</td>
+                                <td id="ZAR.5y"></td>
+                                <td><label><input class="qc-input" type="text" size="5" maxlength="8"></label></td>
+                                <td class="text-center"><label><input type="checkbox" checked="y"></label></td>
+                                <td id="ZAR.5y_c"></td>
+                            </tr>
+                            <tr>
+                                <td>7y</td>
+                                <td id="ZAR.7y"></td>
+                                <td><label><input class="qc-input" type="text" size="5" maxlength="8"></label></td>
+                                <td class="text-center"><label><input type="checkbox" checked="y"></label></td>
+                                <td id="ZAR.7y_c"></td>
+                            </tr>
+                            <tr>
+                                <td>10y</td>
+                                <td id="ZAR.10y"></td>
+                                <td><label><input class="qc-input" type="text" size="5" maxlength="8"></label></td>
+                                <td class="text-center"><label><input type="checkbox" checked="y"></label></td>
+                                <td id="ZAR.10y_c"></td>
+                            </tr>
+                            <tr>
+                                <td>12y</td>
+                                <td id="ZAR.12y"></td>
+                                <td><label><input class="qc-input" type="text" size="5" maxlength="8"></label></td>
+                                <td class="text-center"><label><input type="checkbox" checked="y"></label></td>
+                                <td id="ZAR.12y_c"></td>
+                            </tr>
+                            <tr>
+                                <td>15y</td>
+                                <td id="ZAR.15y"></td>
+                                <td><label><input class="qc-input" type="text" size="5" maxlength="8"></label></td>
+                                <td class="text-center"><label><input type="checkbox" checked="y"></label></td>
+                                <td id="ZAR.15y_c"></td>
+                            </tr>
+                            <tr>
+                                <td>20y</td>
+                                <td id="ZAR.20y"></td>
+                                <td><label><input class="qc-input" type="text" size="5" maxlength="8"></label></td>
+                                <td class="text-center"><label><input type="checkbox" checked="y"></label></td>
+                                <td id="ZAR.20y_c"></td>
+                            </tr>
+                            <tr>
+                                <td>25y</td>
+                                <td id="ZAR.25y"></td>
+                                <td><label><input class="qc-input" type="text" size="5" maxlength="8"></label></td>
+                                <td class="text-center"><label><input type="checkbox" checked="y"></label></td>
+                                <td id="ZAR.25y_c"></td>
+                            </tr>
+                            <tr>
+                                <td>30y</td>
+                                <td id="ZAR.30y"></td>
+                                <td><label><input class="qc-input" type="text" size="5" maxlength="8"></label></td>
+                                <td class="text-center"><label><input type="checkbox" checked="y"></label></td>
+                                <td id="ZAR.30y_c"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </li>
+                <li data-row="1" data-col="1" data-sizex="22" data-sizey="15">
+                    <div id="firstRates"></div>
+                </li>
+                <li data-row="1" data-col="1" data-sizex="22" data-sizey="15">
+                    <div id="thirdRates"></div>
+                </li>
+                <li data-row="12" data-col="1" data-sizex="26" data-sizey="13">
+                    <table class="table table-condensed table-hover text-right">
+                        <thead>
+                            <tr>
+                                <th class="text-right"></th>
+                                <th class="text-right">1y</th>
+                                <th class="text-right">2y</th>
+                                <th class="text-right">3y</th>
+                                <th class="text-right">4y</th>
+                                <th class="text-right">5y</th>
+                                <th class="text-right">6y</th>
+                                <th class="text-right">7y</th>
+                                <th class="text-right">8y</th>
+                                <th class="text-right">9y</th>
+                                <th class="text-right">10y</th>
+                                <th class="text-right">12y</th>
+                                <th class="text-right">15y</th>
+                            </tr>
+                        </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>0d</strong></td>
+                            <td id="ZAR.0d1y"></td>
+                            <td id="ZAR.0d2y"></td>
+                            <td id="ZAR.0d3y"></td>
+                            <td id="ZAR.0d4y"></td>
+                            <td id="ZAR.0d5y"></td>
+                            <td id="ZAR.0d6y"></td>
+                            <td id="ZAR.0d7y"></td>
+                            <td id="ZAR.0d8y"></td>
+                            <td id="ZAR.0d9y"></td>
+                            <td id="ZAR.0d10y"></td>
+                            <td id="ZAR.0d12y"></td>
+                            <td id="ZAR.0d15y"></td>
+                        </tr>
+                        <tr>
+                            <td><strong>1y</strong></td>
+                            <td id="ZAR.1y1y"></td>
+                            <td id="ZAR.1y2y"></td>
+                            <td id="ZAR.1y3y"></td>
+                            <td id="ZAR.1y4y"></td>
+                            <td id="ZAR.1y5y"></td>
+                            <td id="ZAR.1y6y"></td>
+                            <td id="ZAR.1y7y"></td>
+                            <td id="ZAR.1y8y"></td>
+                            <td id="ZAR.1y9y"></td>
+                            <td id="ZAR.1y10y"></td>
+                            <td id="ZAR.1y12y"></td>
+                            <td id="ZAR.1y15y"></td>
+                        </tr>
+                        <tr>
+                            <td><strong>2y</strong></td>
+                            <td id="ZAR.2y1y"></td>
+                            <td id="ZAR.2y2y"></td>
+                            <td id="ZAR.2y3y"></td>
+                            <td id="ZAR.2y4y"></td>
+                            <td id="ZAR.2y5y"></td>
+                            <td id="ZAR.2y6y"></td>
+                            <td id="ZAR.2y7y"></td>
+                            <td id="ZAR.2y8y"></td>
+                            <td id="ZAR.2y9y"></td>
+                            <td id="ZAR.2y10y"></td>
+                            <td id="ZAR.2y12y"></td>
+                            <td id="ZAR.2y15y"></td>
+                        </tr>
+                        <tr>
+                            <td><strong>3y</strong></td>
+                            <td id="ZAR.3y1y"></td>
+                            <td id="ZAR.3y2y"></td>
+                            <td id="ZAR.3y3y"></td>
+                            <td id="ZAR.3y4y"></td>
+                            <td id="ZAR.3y5y"></td>
+                            <td id="ZAR.3y6y"></td>
+                            <td id="ZAR.3y7y"></td>
+                            <td id="ZAR.3y8y"></td>
+                            <td id="ZAR.3y9y"></td>
+                            <td id="ZAR.3y10y"></td>
+                            <td id="ZAR.3y12y"></td>
+                            <td id="ZAR.3y15y"></td>
+                        </tr>
+                        <tr>
+                            <td><strong>4y</strong></td>
+                            <td id="ZAR.4y1y"></td>
+                            <td id="ZAR.4y2y"></td>
+                            <td id="ZAR.4y3y"></td>
+                            <td id="ZAR.4y4y"></td>
+                            <td id="ZAR.4y5y"></td>
+                            <td id="ZAR.4y6y"></td>
+                            <td id="ZAR.4y7y"></td>
+                            <td id="ZAR.4y8y"></td>
+                            <td id="ZAR.4y9y"></td>
+                            <td id="ZAR.4y10y"></td>
+                            <td id="ZAR.4y12y"></td>
+                            <td id="ZAR.4y15y"></td>
+                        </tr>
+                        <tr>
+                            <td><strong>5y</strong></td>
+                            <td id="ZAR.5y1y"></td>
+                            <td id="ZAR.5y2y"></td>
+                            <td id="ZAR.5y3y"></td>
+                            <td id="ZAR.5y4y"></td>
+                            <td id="ZAR.5y5y"></td>
+                            <td id="ZAR.5y6y"></td>
+                            <td id="ZAR.5y7y"></td>
+                            <td id="ZAR.5y8y"></td>
+                            <td id="ZAR.5y9y"></td>
+                            <td id="ZAR.5y10y"></td>
+                            <td id="ZAR.5y12y"></td>
+                            <td id="ZAR.5y15y"></td>
+                        </tr>
+                        <tr>
+                            <td><strong>6y</strong></td>
+                            <td id="ZAR.6y1y"></td>
+                            <td id="ZAR.6y2y"></td>
+                            <td id="ZAR.6y3y"></td>
+                            <td id="ZAR.6y4y"></td>
+                            <td id="ZAR.6y5y"></td>
+                            <td id="ZAR.6y6y"></td>
+                            <td id="ZAR.6y7y"></td>
+                            <td id="ZAR.6y8y"></td>
+                            <td id="ZAR.6y9y"></td>
+                            <td id="ZAR.6y10y"></td>
+                            <td id="ZAR.6y12y"></td>
+                            <td id="ZAR.6y15y"></td>
+                        </tr>
+                        <tr>
+                            <td><strong>7y</strong></td>
+                            <td id="ZAR.7y1y"></td>
+                            <td id="ZAR.7y2y"></td>
+                            <td id="ZAR.7y3y"></td>
+                            <td id="ZAR.7y4y"></td>
+                            <td id="ZAR.7y5y"></td>
+                            <td id="ZAR.7y6y"></td>
+                            <td id="ZAR.7y7y"></td>
+                            <td id="ZAR.7y8y"></td>
+                            <td id="ZAR.7y9y"></td>
+                            <td id="ZAR.7y10y"></td>
+                            <td id="ZAR.7y12y"></td>
+                            <td id="ZAR.7y15y"></td>
+                        </tr>
+                        <tr>
+                            <td><strong>8y</strong></td>
+                            <td id="ZAR.8y1y"></td>
+                            <td id="ZAR.8y2y"></td>
+                            <td id="ZAR.8y3y"></td>
+                            <td id="ZAR.8y4y"></td>
+                            <td id="ZAR.8y5y"></td>
+                            <td id="ZAR.8y6y"></td>
+                            <td id="ZAR.8y7y"></td>
+                            <td id="ZAR.8y8y"></td>
+                            <td id="ZAR.8y9y"></td>
+                            <td id="ZAR.8y10y"></td>
+                            <td id="ZAR.8y12y"></td>
+                            <td id="ZAR.8y15y"></td>
+                        </tr>
+                        <tr>
+                            <td><strong>9y</strong></td>
+                            <td id="ZAR.9y1y"></td>
+                            <td id="ZAR.9y2y"></td>
+                            <td id="ZAR.9y3y"></td>
+                            <td id="ZAR.9y4y"></td>
+                            <td id="ZAR.9y5y"></td>
+                            <td id="ZAR.9y6y"></td>
+                            <td id="ZAR.9y7y"></td>
+                            <td id="ZAR.9y8y"></td>
+                            <td id="ZAR.9y9y"></td>
+                            <td id="ZAR.9y10y"></td>
+                            <td id="ZAR.9y12y"></td>
+                            <td id="ZAR.9y15y"></td>
+                        </tr>
+                        <tr>
+                            <td><strong>10y</strong></td>
+                            <td id="ZAR.10y1y"></td>
+                            <td id="ZAR.10y2y"></td>
+                            <td id="ZAR.10y3y"></td>
+                            <td id="ZAR.10y4y"></td>
+                            <td id="ZAR.10y5y"></td>
+                            <td id="ZAR.10y6y"></td>
+                            <td id="ZAR.10y7y"></td>
+                            <td id="ZAR.10y8y"></td>
+                            <td id="ZAR.10y9y"></td>
+                            <td id="ZAR.10y10y"></td>
+                            <td id="ZAR.10y12y"></td>
+                            <td id="ZAR.10y15y"></td>
+                        </tr>
+                        <tr>
+                            <td><strong>12y</strong></td>
+                            <td id="ZAR.12y1y"></td>
+                            <td id="ZAR.12y2y"></td>
+                            <td id="ZAR.12y3y"></td>
+                            <td id="ZAR.12y4y"></td>
+                            <td id="ZAR.12y5y"></td>
+                            <td id="ZAR.12y6y"></td>
+                            <td id="ZAR.12y7y"></td>
+                            <td id="ZAR.12y8y"></td>
+                            <td id="ZAR.12y9y"></td>
+                            <td id="ZAR.12y10y"></td>
+                            <td id="ZAR.12y12y"></td>
+                            <td id="ZAR.12y15y"></td>
+                        </tr>
+                        <tr>
+                            <td><strong>15y</strong></td>
+                            <td id="ZAR.15y1y"></td>
+                            <td id="ZAR.15y2y"></td>
+                            <td id="ZAR.15y3y"></td>
+                            <td id="ZAR.15y4y"></td>
+                            <td id="ZAR.15y5y"></td>
+                            <td id="ZAR.15y6y"></td>
+                            <td id="ZAR.15y7y"></td>
+                            <td id="ZAR.15y8y"></td>
+                            <td id="ZAR.15y9y"></td>
+                            <td id="ZAR.15y10y"></td>
+                            <td id="ZAR.15y12y"></td>
+                            <td id="ZAR.15y15y"></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </li>
+                <li data-row="1" data-col="1" data-sizex="6" data-sizey="5">
+                    <table class="table table-condensed table-hover">
+                        <thead>
+                            <tr>
+                                <th>Currency</th>
+                                <th class="text-right">Spot</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>EURUSD</td>
+                                <td id="EURUSD.SPOT" class="text-right">1.3696</td>
+                            </tr>
+                            <tr>
+                                <td>GBPUSD</td>
+                                <td id="GBPUSD.SPOT" class="text-right">1.6817</td>
+                            </tr>
+                            <tr>
+                                <td>USDJPY</td>
+                                <td id="USDJPY.SPOT" class="text-right">101.5200</td>
+                            </tr>
+                            <tr>
+                                <td>USDCHF</td>
+                                <td id="USDCHF.SPOT" class="text-right">0.8918</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<footer role="contentinfo">
+    <div class="footer">
+        <p><span class="glyphicon glyphicon-copyright-mark"></span> QuantCloud LLC. 2013-2014. All rights reserved.</p>
+    </div>
+</footer>
+
+<!-- build:js scripts/vendor.js -->
+<!-- bower:js -->
+<script src="../bower_components/jquery/dist/jquery.js"></script>
+<script src="../bower_components/gridster/dist/jquery.gridster.js"></script>
+<script src="../bower_components/highcharts-release/highcharts.js"></script>
+<script src="../bower_components/highcharts-release/highcharts-more.js"></script>
+<script src="../bower_components/highcharts-release/modules/exporting.src.js"></script>
+<script src="../bower_components/underscore/underscore.js"></script>
+<script src="../bower_components/bower-sockjs-client/sockjs.js"></script>
+<script src="../bower_components/d3/d3.js"></script>
+<script src="../bower_components/lodash/dist/lodash.compat.js"></script>
+<script src="../bower_components/contour/dist/contour.min.js"></script>
+<script src="../bower_components/requirejs/require.js"></script>
+<!-- endbower -->
+<!-- endbuild -->
+
+<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+<!--<script>-->
+    <!--(function (b, o, i, l, e, r) {-->
+        <!--b.GoogleAnalyticsObject = l;-->
+        <!--b[l] || (b[l] =-->
+                <!--function () {-->
+                    <!--(b[l].q = b[l].q || []).push(arguments)-->
+                <!--});-->
+        <!--b[l].l = +new Date;-->
+        <!--e = o.createElement(i);-->
+        <!--r = o.getElementsByTagName(i)[0];-->
+        <!--e.src = '//www.google-analytics.com/analytics.js';-->
+        <!--r.parentNode.insertBefore(e, r)-->
+    <!--}(window, document, 'script', 'ga'));-->
+    <!--ga('create', 'UA-XXXXX-X');-->
+    <!--ga('send', 'pageview');-->
+<!--</script>-->
+
+<!-- build:js scripts/plugins.js -->
+<script src="../bower_components/bootstrap/js/affix.js"></script>
+<script src="../bower_components/bootstrap/js/alert.js"></script>
+<script src="../bower_components/bootstrap/js/dropdown.js"></script>
+<script src="../bower_components/bootstrap/js/tooltip.js"></script>
+<script src="../bower_components/bootstrap/js/modal.js"></script>
+<script src="../bower_components/bootstrap/js/transition.js"></script>
+<script src="../bower_components/bootstrap/js/button.js"></script>
+<script src="../bower_components/bootstrap/js/popover.js"></script>
+<script src="../bower_components/bootstrap/js/carousel.js"></script>
+<script src="../bower_components/bootstrap/js/scrollspy.js"></script>
+<script src="../bower_components/bootstrap/js/collapse.js"></script>
+<script src="../bower_components/bootstrap/js/tab.js"></script>
+<!-- endbuild -->
+
+<!-- build:js({app,.tmp}) scripts/main_c.js -->
+<script src="scripts/subscription.js"></script>
+<script src="scripts/main.js"></script>
+<script src="scripts/qc_c.js"></script>
+<!-- endbuild -->
+</body>
+</html>
