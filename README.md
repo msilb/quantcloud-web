@@ -4,7 +4,7 @@
 
 After cloning, perform the following tasks:
 
-1. Make sure you have all dependencies installed (Node.js including npm, Yeoman including yo, grunt, and bower).
+1. Make sure you have all dependencies installed (Node.js incl. npm, grunt, and bower).
 2. Run `npm install`.
 3. Run `bower update`.
 4. Run `grunt serve`, this should display the main page. Alternatively, import into IntelliJ as new project and open index.html.
