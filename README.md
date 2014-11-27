@@ -4,10 +4,10 @@
 
 This is an experimental HTML5 front-end for a yield curve calculation engine QuantCloud. It is showcasing use of the following front-end technologies:
 
-* WebSocket JS (https://www.websocket.org) for communication with the back-end
-* gridster.js (http://gridster.net) for laying out portlets
-* Hichcharts (http://highcharts.com) for charting
-* npm (https://npmjs.org), Bower (http://bower.io) and Grunt (http://gruntjs.com) for building the app
+* WebSocket JS (https://www.websocket.org) for communication with the back-end.
+* gridster.js (http://gridster.net) for laying out portlets.
+* Hichcharts (http://highcharts.com) for charting.
+* npm (https://npmjs.org), Bower (http://bower.io) and Grunt (http://gruntjs.com) for building the app.
 
 ## Getting Started
 
@@ -16,7 +16,7 @@ After cloning, perform the following tasks:
 1. Make sure you have all dependencies installed (Node.js incl. npm, grunt, and bower).
 2. Run `npm install`.
 3. Run `bower update`.
-4. Run `grunt serve`, this should display the main page. Alternatively, import into IntelliJ as new project and open index.html.
+4. Run `grunt serve`, this should display the main page.
 
 ## Dependencies Management
 
