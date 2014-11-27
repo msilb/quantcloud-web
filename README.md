@@ -2,7 +2,7 @@
 
 ## Overview
 
-This is an experimental HTML5 front-end for a yield curve calculation engine QuantCloud. It is showcasing use of the following front-end technologies:
+This is an experimental HTML5 front-end for a yield curve calculation engine QuantCloud. It is showcasing use of the following client-side technologies:
 
 * WebSocket JS (https://www.websocket.org) for communication with the back-end.
 * gridster.js (http://gridster.net) for laying out portlets.
